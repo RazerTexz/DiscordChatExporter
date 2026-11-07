@@ -89,7 +89,7 @@ internal class PlainTextMessageWriter(Stream stream, ExportContext context)
                 await _writer.WriteLineAsync(
                     await FormatMarkdownAsync(embed.Description, cancellationToken)
                 );
-            }*/
+            }
 
             foreach (var field in embed.Fields)
             {
@@ -108,7 +108,7 @@ internal class PlainTextMessageWriter(Stream stream, ExportContext context)
                 }
             }
 
-            /*if (!string.IsNullOrWhiteSpace(embed.Thumbnail?.Url))
+            if (!string.IsNullOrWhiteSpace(embed.Thumbnail?.Url))
             {
                 await _writer.WriteLineAsync(
                     await Context.ResolveAssetUrlAsync(
@@ -129,12 +129,12 @@ internal class PlainTextMessageWriter(Stream stream, ExportContext context)
                         )
                     );
                 }
-            }*/
+            }
 
             if (!string.IsNullOrWhiteSpace(embed.Footer?.Text))
             {
                 await _writer.WriteLineAsync(embed.Footer.Text);
-            }
+            }*/
 
             await _writer.WriteLineAsync();
         }
