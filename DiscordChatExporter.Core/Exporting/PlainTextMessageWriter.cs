@@ -84,12 +84,12 @@ internal class PlainTextMessageWriter(Stream stream, ExportContext context)
                 );
             }
 
-            if (!string.IsNullOrWhiteSpace(embed.Description))
+            /*if (!string.IsNullOrWhiteSpace(embed.Description))
             {
                 await _writer.WriteLineAsync(
                     await FormatMarkdownAsync(embed.Description, cancellationToken)
                 );
-            }
+            }*/
 
             foreach (var field in embed.Fields)
             {
